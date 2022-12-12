@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); 
+
+ :root{
+     --pin_width: 250px;
+     --pin_border_radius: 16px;
+     --row_increament: 10px;
+     --pin_medium: 33;
+     --pin_large: 45;
+     --pin_small: 26;
+     --menu_icon_widht: 25px;
+     --menu_icon_height: 25px;
+     --menu_border_radius: 20px;
+     --menu_margin: 0 10px 0 10px;
+     --menu_font_family:"Roborto", sans-serif;
+     --hv_background_color: rgb(199, 193, 193);
+     --dropdown_menu_radius: 15px;
+ }
+ 
+ body{
+     margin: 0;
+     padding: 0;
+     background-color: grey;
+ }
+
+ .header {
+    display: flex;
+    font-family: var(--menu_font_family);
+    color: grey;
+    font-size: 20px;
+    font-style: medium;
+    text-align: center;
+    padding: 10px ;
+    background-color: white;
+    align-items: center;
+  }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+.menu_icon{
+    height: var(--menu_icon_height);
+    width: var(--menu_icon_widht);
+    margin: var(--menu_margin);
+}
+
+.pin_logo{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+.home{
+    width: 80px;
+    height: 40px;
+    background: black;
+    border-radius: var(--menu_border_radius);
+    margin: 5px;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    margin: var(--menu_margin);
+}
+.hoverMenu {
+    display: inline-block;
+    background: black;
+    border-radius: var(--menu_border_radius);
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    width: 80px;
+  }
+.hv {
+    display: none;
+    position: absolute;
+    background-color:white;
+    border-radius: var(--pin_border_radius);
+    width: 150px;
+    height: 90px;
+  }
+  .hv_in{
+    margin: 3px 3px 3px 3px;
+    background-color: var(--hv_background_color) ;
+    border-radius: var(--dropdown_menu_radius);
+    ;
+  }
+.hv li {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  } 
+.hoverMenu:hover .hv {
+    display: block;
+  }
+
+.search_bar{
+    width: 1050px;
+    height: 40px;
+    background: var(--hv_background_color);
+    border: none;
+    border-radius: var(--menu_border_radius);
+    color:rgb(52, 52, 52);
+    margin: var(--menu_margin);
+    font-family: var(--menu_font_family);
+    font-size: 20px;
+    font-style: medium;
+ }
+
+.pin_container{
+     margin: 0;
+     padding: 0;
+     width: 100vw;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     display: grid;
+     grid-template-columns: repeat(auto-fill, var(--pin_width));
+     grid-auto-rows: var(--row_increament);
+     justify-content: center;
+
+     background-color: grey;
+ }
+
+ .pin{
+     margin: 15px 10px;
+     padding: 0;
+     border-radius: var(--pin_border_radius);
+     
+     background-color: red;
+ }
+
+ .pin_small{
+     grid-row-end: span var(--pin_small);
+ }
+
+ .pin_medium{
+    grid-row-end: span var(--pin_medium);
+}
+
+.pin_large{
+    grid-row-end: span var(--pin_large);
+}
